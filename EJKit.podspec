@@ -90,14 +90,14 @@ Pod::Spec.new do |s|
 
    end
 
-   s.subspec 'EJHttpClient' do |ss|
+   s.subspec 'EJHttpKit' do |ss|
     
       ss.subspec 'EJHttpRequest' do |sss|
         sss.source_files = 'Pod/Classes/EJHttpClient/EJHttpRequest/*'
         sss.public_header_files = 'Pod/Classes/EJHttpClient/EJHttpRequest/*.h'
       end
 
-      ss.subspec 'EJHttpKit' do |sss|
+      ss.subspec 'EJHttpClient' do |sss|
         sss.source_files = 'Pod/Classes/EJHttpClient/EJHttpClient/*'
         sss.public_header_files = 'Pod/Classes/EJHttpClient/EJHttpClient/*.h'
       end
