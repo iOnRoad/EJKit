@@ -1,0 +1,1 @@
+../../../EJKit/Pod/Classes/EJTools/SynthesizeSingleton.h

@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>font</key>
+	<dict>
+		<key>navigationbar_title</key>
+		<integer>16</integer>
+		<key>navigationbar_item</key>
+		<integer>15</integer>
+		<key>tabbar_text</key>
+		<integer>12</integer>
+	</dict>
+	<key>data</key>
+	<dict>
+		<key>webViewCloseKey</key>
+		<string>ej://h5BackToNativeHomePage</string>
+		<key>webViewBackKey</key>
+		<string>ej://back</string>
+		<key>webViewReferrer</key>
+		<string>window.theAppReferrer</string>
+		<key>webViewReferrerURL</key>
+		<string>window.theAppReferrerUrl</string>
+		<key>webView404ImageName</key>
+		<string>ej_sad</string>
+		<key>loadingImageName</key>
+		<string>ej_loading,ej_loading1,ej_loading2,ej_loading3</string>
+		<key>navigatoinBar_backImgName</key>
+		<string>nav_bar_back</string>
+		<key>tabbar_bgImgName</key>
+		<string>tab_radius</string>
+		<key>keyboradImgName</key>
+		<string>keyborad</string>
+		<key>H5BaseURL</key>
+		<string>https://www.test.com</string>
+	</dict>
+	<key>color</key>
+	<dict>
+		<key>webView404TipColor</key>
+		<string>#999999</string>
+		<key>baseview_backgroundColor</key>
+		<string>#ffffff</string>
+		<key>navigationBar_textColor</key>
+		<string>#333333</string>
+		<key>navigationBar_backgroundColor</key>
+		<string>#ffffff</string>
+		<key>navigationBar_shadowLineColor</key>
+		<string>#aaaaaa</string>
+		<key>tabbar_normalTextColor</key>
+		<string>#999999</string>
+		<key>tabbar_selectedTextColor</key>
+		<string>#333333</string>
+		<key>tabbar_backgroundColor</key>
+		<string>#ffffff</string>
+	</dict>
+</dict>
+</plist>

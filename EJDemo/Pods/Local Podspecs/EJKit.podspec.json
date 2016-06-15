@@ -1,0 +1,119 @@
+{
+  "name": "EJKit",
+  "version": "1.0.0",
+  "summary": "A Library used as iOS framework. Work, it's a easy thing.",
+  "description": "This Library contains EJHttpKit,EJTools,EJBaseKit,EJExtension.\"",
+  "homepage": "https://github.com/iOnRoad/EJKit",
+  "license": "MIT",
+  "authors": {
+    "iOnRoad": "xuwenchao_15@163.com"
+  },
+  "source": {
+    "git": "https://github.com/iOnRoad/EJKit.git",
+    "tag": "1.0.0"
+  },
+  "platforms": {
+    "ios": "7.0"
+  },
+  "requires_arc": true,
+  "source_files": "Pod/Classes/EJKitHeader.h",
+  "resources": "Pod/Classes/Resource/***",
+  "public_header_files": "Pod/Classes/EJKitHeader.h",
+  "subspecs": [
+    {
+      "name": "EJBase",
+      "source_files": "Pod/Classes/EJBase/*",
+      "public_header_files": "Pod/Classes/EJBase/*.h",
+      "frameworks": [
+        "UIKit",
+        "QuartzCore"
+      ]
+    },
+    {
+      "name": "EJManager",
+      "source_files": "Pod/Classes/EJManager/*",
+      "public_header_files": "Pod/Classes/EJManager/*.h",
+      "frameworks": [
+        "UIKit",
+        "QuartzCore"
+      ],
+      "dependencies": {
+        "BaiduMapKit": [
+
+        ]
+      }
+    },
+    {
+      "name": "EJTools",
+      "source_files": "Pod/Classes/EJTools/*",
+      "public_header_files": "Pod/Classes/EJTools/*.h",
+      "frameworks": [
+        "UIKit",
+        "QuartzCore",
+        "CoreLocation",
+        "AVFoundation",
+        "AssetsLibrary",
+        "Security",
+        "MapKit"
+      ],
+      "dependencies": {
+        "KeychainItemWrapper": [
+
+        ],
+        "SDWebImage": [
+
+        ]
+      }
+    },
+    {
+      "name": "EJDBKeyValue",
+      "source_files": "Pod/Classes/EJDBKeyValue/*",
+      "public_header_files": "Pod/Classes/EJDBKeyValue/*.h",
+      "frameworks": [
+        "UIKit",
+        "QuartzCore"
+      ],
+      "dependencies": {
+        "LKDBHelper": [
+
+        ],
+        "FMDB": [
+
+        ]
+      }
+    },
+    {
+      "name": "EJHttpClient",
+      "frameworks": "UIKit",
+      "dependencies": {
+        "Reachability": [
+
+        ],
+        "AFNetworking": [
+
+        ],
+        "OpenUDID": [
+
+        ],
+        "AFgzipRequestSerializer": [
+
+        ],
+        "MJExtension": [
+
+        ]
+      },
+      "subspecs": [
+        {
+          "name": "EJHttpRequest",
+          "source_files": "Pod/Classes/EJHttpClient/EJHttpRequest/*",
+          "public_header_files": "Pod/Classes/EJHttpClient/EJHttpRequest/*.h"
+        },
+        {
+          "name": "EJHttpKit",
+          "source_files": "Pod/Classes/EJHttpClient/EJHttpClient/*",
+          "public_header_files": "Pod/Classes/EJHttpClient/EJHttpClient/*.h"
+        }
+      ]
+    }
+  ]
+}
