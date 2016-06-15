@@ -79,29 +79,6 @@ Pod::Spec.new do |s|
 
   end
 
- 
-s.subspec 'EJHttpClient' do |ss|
-    
-    ss.subspec 'EJHttpRequest' do |sss|
-      sss.source_files = 'Pod/Classes/EJHttpClient/EJHttpRequest/*'
-      sss.public_header_files = 'Pod/Classes/EJHttpClient/EJHttpRequest/*.h'
-    end
-
-    ss.subspec 'EJHttpKit' do |sss|
-      sss.source_files = 'Pod/Classes/EJHttpClient/EJHttpClient/*'
-      sss.public_header_files = 'Pod/Classes/EJHttpClient/EJHttpClient/*.h'
-    end
-
-    ss.frameworks = 'UIKit'
-
-    ss.dependency 'Reachability'
-    ss.dependency 'AFNetworking'
-    ss.dependency 'OpenUDID'
-    ss.dependency 'AFgzipRequestSerializer'
-    ss.dependency 'MJExtension'
-    
-  end
-
    s.subspec 'EJDBKeyValue' do |ss|
 
    	ss.source_files = 'Pod/Classes/EJDBKeyValue/*'
@@ -112,5 +89,27 @@ s.subspec 'EJHttpClient' do |ss|
    	ss.dependency 'FMDB' 
 
    end
+
+   s.subspec 'EJHttpClient' do |ss|
+    
+      ss.subspec 'EJHttpRequest' do |sss|
+        sss.source_files = 'Pod/Classes/EJHttpClient/EJHttpRequest/*'
+        sss.public_header_files = 'Pod/Classes/EJHttpClient/EJHttpRequest/*.h'
+      end
+
+      ss.subspec 'EJHttpKit' do |sss|
+        sss.source_files = 'Pod/Classes/EJHttpClient/EJHttpClient/*'
+        sss.public_header_files = 'Pod/Classes/EJHttpClient/EJHttpClient/*.h'
+      end
+
+      ss.frameworks = 'UIKit'
+
+      ss.dependency 'Reachability'
+      ss.dependency 'AFNetworking'
+      ss.dependency 'OpenUDID'
+      ss.dependency 'AFgzipRequestSerializer'
+      ss.dependency 'MJExtension'
+    
+    end
 
 end
