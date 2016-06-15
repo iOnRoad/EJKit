@@ -93,13 +93,13 @@ Pod::Spec.new do |s|
    s.subspec 'EJHttpKit' do |ss|
     
       ss.subspec 'EJHttpRequest' do |sss|
-        sss.source_files = 'Pod/Classes/EJHttpClient/EJHttpRequest/*'
-        sss.public_header_files = 'Pod/Classes/EJHttpClient/EJHttpRequest/*.h'
+        sss.source_files = 'Pod/Classes/EJHttpKit/EJHttpRequest/*'
+        sss.public_header_files = 'Pod/Classes/EJHttpKit/EJHttpRequest/*.h'
       end
 
       ss.subspec 'EJHttpClient' do |sss|
-        sss.source_files = 'Pod/Classes/EJHttpClient/EJHttpClient/*'
-        sss.public_header_files = 'Pod/Classes/EJHttpClient/EJHttpClient/*.h'
+        sss.source_files = 'Pod/Classes/EJHttpKit/EJHttpClient/*'
+        sss.public_header_files = 'Pod/Classes/EJHttpKit/EJHttpClient/*.h'
       end
 
       ss.frameworks = 'UIKit'

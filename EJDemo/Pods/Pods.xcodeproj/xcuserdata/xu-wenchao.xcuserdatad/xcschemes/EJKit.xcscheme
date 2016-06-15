@@ -14,7 +14,7 @@
             buildForArchiving = "YES">
             <BuildableReference
                BuildableIdentifier = 'primary'
-               BlueprintIdentifier = '7F238436D8253CE13912D2EC'
+               BlueprintIdentifier = '10B719931CE73A7DA12D8CD4'
                BlueprintName = 'EJKit'
                ReferencedContainer = 'container:Pods.xcodeproj'
                BuildableName = 'libEJKit.a'>
