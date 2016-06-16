@@ -14,7 +14,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "67262994F69ABFB77F0169E7"
+               BlueprintIdentifier = "6CBC3A007F4F959DED72ED1C"
                BuildableName = "libAFgzipRequestSerializer.a"
                BlueprintName = "AFgzipRequestSerializer"
                ReferencedContainer = "container:Pods.xcodeproj">

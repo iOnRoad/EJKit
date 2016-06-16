@@ -83,7 +83,7 @@
       }
     },
     {
-      "name": "EJHttpClient",
+      "name": "EJHttpKit",
       "frameworks": "UIKit",
       "dependencies": {
         "Reachability": [
@@ -105,13 +105,13 @@
       "subspecs": [
         {
           "name": "EJHttpRequest",
-          "source_files": "Pod/Classes/EJHttpClient/EJHttpRequest/*",
-          "public_header_files": "Pod/Classes/EJHttpClient/EJHttpRequest/*.h"
+          "source_files": "Pod/Classes/EJHttpKit/EJHttpRequest/*",
+          "public_header_files": "Pod/Classes/EJHttpKit/EJHttpRequest/*.h"
         },
         {
-          "name": "EJHttpKit",
-          "source_files": "Pod/Classes/EJHttpClient/EJHttpClient/*",
-          "public_header_files": "Pod/Classes/EJHttpClient/EJHttpClient/*.h"
+          "name": "EJHttpClient",
+          "source_files": "Pod/Classes/EJHttpKit/EJHttpClient/*",
+          "public_header_files": "Pod/Classes/EJHttpKit/EJHttpClient/*.h"
         }
       ]
     }

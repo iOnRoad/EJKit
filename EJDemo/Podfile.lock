@@ -2,53 +2,53 @@ PODS:
   - AFgzipRequestSerializer (0.0.2):
     - AFNetworking (~> 2.0)
     - Godzippa (~> 1.0)
-  - AFNetworking (2.6.1):
-    - AFNetworking/NSURLConnection (= 2.6.1)
-    - AFNetworking/NSURLSession (= 2.6.1)
-    - AFNetworking/Reachability (= 2.6.1)
-    - AFNetworking/Security (= 2.6.1)
-    - AFNetworking/Serialization (= 2.6.1)
-    - AFNetworking/UIKit (= 2.6.1)
-  - AFNetworking/NSURLConnection (2.6.1):
+  - AFNetworking (2.6.3):
+    - AFNetworking/NSURLConnection (= 2.6.3)
+    - AFNetworking/NSURLSession (= 2.6.3)
+    - AFNetworking/Reachability (= 2.6.3)
+    - AFNetworking/Security (= 2.6.3)
+    - AFNetworking/Serialization (= 2.6.3)
+    - AFNetworking/UIKit (= 2.6.3)
+  - AFNetworking/NSURLConnection (2.6.3):
     - AFNetworking/Reachability
     - AFNetworking/Security
     - AFNetworking/Serialization
-  - AFNetworking/NSURLSession (2.6.1):
+  - AFNetworking/NSURLSession (2.6.3):
     - AFNetworking/Reachability
     - AFNetworking/Security
     - AFNetworking/Serialization
-  - AFNetworking/Reachability (2.6.1)
-  - AFNetworking/Security (2.6.1)
-  - AFNetworking/Serialization (2.6.1)
-  - AFNetworking/UIKit (2.6.1):
+  - AFNetworking/Reachability (2.6.3)
+  - AFNetworking/Security (2.6.3)
+  - AFNetworking/Serialization (2.6.3)
+  - AFNetworking/UIKit (2.6.3):
     - AFNetworking/NSURLConnection
     - AFNetworking/NSURLSession
-  - BaiduMapKit (2.9.0.2)
+  - BaiduMapKit (2.10.2)
   - EJKit (1.0.0):
     - EJKit/EJBase (= 1.0.0)
     - EJKit/EJDBKeyValue (= 1.0.0)
-    - EJKit/EJHttpClient (= 1.0.0)
+    - EJKit/EJHttpKit (= 1.0.0)
     - EJKit/EJManager (= 1.0.0)
     - EJKit/EJTools (= 1.0.0)
   - EJKit/EJBase (1.0.0)
   - EJKit/EJDBKeyValue (1.0.0):
     - FMDB
     - LKDBHelper
-  - EJKit/EJHttpClient (1.0.0):
+  - EJKit/EJHttpKit (1.0.0):
     - AFgzipRequestSerializer
     - AFNetworking
-    - EJKit/EJHttpClient/EJHttpKit (= 1.0.0)
-    - EJKit/EJHttpClient/EJHttpRequest (= 1.0.0)
+    - EJKit/EJHttpKit/EJHttpClient (= 1.0.0)
+    - EJKit/EJHttpKit/EJHttpRequest (= 1.0.0)
     - MJExtension
     - OpenUDID
     - Reachability
-  - EJKit/EJHttpClient/EJHttpKit (1.0.0):
+  - EJKit/EJHttpKit/EJHttpClient (1.0.0):
     - AFgzipRequestSerializer
     - AFNetworking
     - MJExtension
     - OpenUDID
     - Reachability
-  - EJKit/EJHttpClient/EJHttpRequest (1.0.0):
+  - EJKit/EJHttpKit/EJHttpRequest (1.0.0):
     - AFgzipRequestSerializer
     - AFNetworking
     - MJExtension
@@ -59,21 +59,19 @@ PODS:
   - EJKit/EJTools (1.0.0):
     - KeychainItemWrapper
     - SDWebImage
-  - FMDB (2.5):
-    - FMDB/standard (= 2.5)
-  - FMDB/common (2.5)
-  - FMDB/standard (2.5):
-    - FMDB/common
+  - FMDB (2.6.2):
+    - FMDB/standard (= 2.6.2)
+  - FMDB/standard (2.6.2)
   - Godzippa (1.1.0)
   - KeychainItemWrapper (1.2)
-  - LKDBHelper (2.1.4):
+  - LKDBHelper (2.2.1):
     - FMDB
-  - MJExtension (2.5.16)
+  - MJExtension (3.0.10)
   - OpenUDID (1.0.0)
   - Reachability (3.2)
-  - SDWebImage (3.7.3):
-    - SDWebImage/Core (= 3.7.3)
-  - SDWebImage/Core (3.7.3)
+  - SDWebImage (3.7.6):
+    - SDWebImage/Core (= 3.7.6)
+  - SDWebImage/Core (3.7.6)
 
 DEPENDENCIES:
   - EJKit (from `~/Desktop/EJKit/EJKit.podspec`)
@@ -84,16 +82,16 @@ EXTERNAL SOURCES:
 
 SPEC CHECKSUMS:
   AFgzipRequestSerializer: 329638fc8ed023a15188dc03dd2f1a930da30ea4
-  AFNetworking: 8e4e60500beb8bec644cf575beee72990a76d399
-  BaiduMapKit: 00f2c2d24a3192b251cff6c8c0847ea40e81fa09
-  EJKit: fcd757bcf460f57f3543a208526971c76896bcfb
-  FMDB: 96e8f1bcc1329e269330f99770ad4285d9003e52
+  AFNetworking: cb8d14a848e831097108418f5d49217339d4eb60
+  BaiduMapKit: b1706a062597c70ec62a0cca93212cba1d3017e1
+  EJKit: 7cb227fb26bb94eae1a8f9a215dd793a90fb557e
+  FMDB: 854a0341b4726e53276f2a8996f06f1b80f9259a
   Godzippa: 21621e8ddc2f1521db473a72b48148c3f0e79d76
   KeychainItemWrapper: 67a240172ed669842bc6bc13ed554dcd50469fa2
-  LKDBHelper: 6bde14a7d8d1915dd6f1a960176cc868175dd14d
-  MJExtension: b8c1321a77d91bcc007b94d38cbf5383c95ea30e
+  LKDBHelper: a8d2ac92cde1f462a3314ab5e2629a527eb0cc54
+  MJExtension: d86aacb740c87519d20e3cca55b6fa4be6cc7548
   OpenUDID: e7cb6984c7304906ad20f3a36bf087b025896b6b
   Reachability: 33e18b67625424e47b6cde6d202dce689ad7af96
-  SDWebImage: 1d2b1a1efda1ade1b00b6f8498865f8ddedc8a84
+  SDWebImage: c325cf02c30337336b95beff20a13df489ec0ec9
 
-COCOAPODS: 0.39.0
+COCOAPODS: 0.38.2

@@ -14,6 +14,11 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
+		<key>EJKit.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>FMDB.xcscheme</key>
 		<dict>
 			<key>isShown</key>
@@ -62,12 +67,12 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>05FF226E53CDB195D0B30336B1756D22</key>
+		<key>0690D3AC982C5E2E6D13064AD6542138</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>0AF8E6F4ED01EACC988EF7C3DCACE5FF</key>
+		<key>13E48E4DB013ABACB8C03874F2248848</key>
 		<dict>
 			<key>primary</key>
 			<true/>
@@ -77,7 +82,17 @@
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>52E4281C7AA2E2AB2A3ADD17DB8B27DC</key>
+		<key>1D616147E63B2ED5BE79C877D2C10DB5</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>22DC535C2B0A517674A35960A0508583</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>3F7B671BDD63BDBCE303604335DF6D35</key>
 		<dict>
 			<key>primary</key>
 			<true/>
@@ -87,32 +102,27 @@
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>79E5013E0E001CB7316AA2C0B9B52574</key>
+		<key>98C208C811FFE3DFA0D464321012CE9E</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>8780E2549264D1D3BBE34EFF2DC09022</key>
+		<key>C809E8DB377D3825A8A526BF73DC0147</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>8CC31EA1A418E047F3584E25897516E5</key>
+		<key>D1BCB7DB5073D234060D35106530AA77</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>A77BB339F72EEF80593133529306BF65</key>
+		<key>D23FD0BD565403FFDD2504670FBD2786</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>B945996CE341DE43FF4D5F46432AC910</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>EF1AE04A5E0B15BD7A5F77B070DDE057</key>
+		<key>EC6336FFAB2D98CAA3B62688DFDA2670</key>
 		<dict>
 			<key>primary</key>
 			<true/>

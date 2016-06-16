@@ -20,7 +20,7 @@
 }
 
 - (NSString *)ej_loadingMessage{
-    return @"请求天气信息中";
+    return @"请稍候";
 }
 
 //其他的默认
