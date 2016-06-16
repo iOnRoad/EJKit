@@ -30,35 +30,44 @@ PODS:
     - EJKit/EJHttpKit (= 1.0.0)
     - EJKit/EJManager (= 1.0.0)
     - EJKit/EJTools (= 1.0.0)
-  - EJKit/EJBase (1.0.0)
+  - EJKit/EJBase (1.0.0):
+    - EJKit/EJManager
   - EJKit/EJDBKeyValue (1.0.0):
-    - FMDB
-    - LKDBHelper
+    - FMDB (~> 2.6.2)
+    - LKDBHelper (~> 2.2.1)
   - EJKit/EJHttpKit (1.0.0):
-    - AFgzipRequestSerializer
-    - AFNetworking
+    - AFgzipRequestSerializer (~> 0.0.2)
+    - AFNetworking (~> 2.6.3)
+    - EJKit/EJBase
     - EJKit/EJHttpKit/EJHttpClient (= 1.0.0)
     - EJKit/EJHttpKit/EJHttpRequest (= 1.0.0)
-    - MJExtension
-    - OpenUDID
-    - Reachability
+    - LKDBHelper (~> 2.2.1)
+    - MJExtension (~> 3.0.10)
+    - OpenUDID (~> 1.0.0)
+    - Reachability (~> 3.2)
   - EJKit/EJHttpKit/EJHttpClient (1.0.0):
-    - AFgzipRequestSerializer
-    - AFNetworking
-    - MJExtension
-    - OpenUDID
-    - Reachability
+    - AFgzipRequestSerializer (~> 0.0.2)
+    - AFNetworking (~> 2.6.3)
+    - EJKit/EJBase
+    - LKDBHelper (~> 2.2.1)
+    - MJExtension (~> 3.0.10)
+    - OpenUDID (~> 1.0.0)
+    - Reachability (~> 3.2)
   - EJKit/EJHttpKit/EJHttpRequest (1.0.0):
-    - AFgzipRequestSerializer
-    - AFNetworking
-    - MJExtension
-    - OpenUDID
-    - Reachability
+    - AFgzipRequestSerializer (~> 0.0.2)
+    - AFNetworking (~> 2.6.3)
+    - EJKit/EJBase
+    - EJKit/EJHttpKit/EJHttpClient
+    - LKDBHelper (~> 2.2.1)
+    - MJExtension (~> 3.0.10)
+    - OpenUDID (~> 1.0.0)
+    - Reachability (~> 3.2)
   - EJKit/EJManager (1.0.0):
-    - BaiduMapKit
+    - BaiduMapKit (~> 2.10.2)
+    - EJKit/EJTools
   - EJKit/EJTools (1.0.0):
-    - KeychainItemWrapper
-    - SDWebImage
+    - KeychainItemWrapper (~> 1.2)
+    - SDWebImage (~> 3.7.6)
   - FMDB (2.6.2):
     - FMDB/standard (= 2.6.2)
   - FMDB/standard (2.6.2)
@@ -82,14 +91,14 @@ EXTERNAL SOURCES:
 
 CHECKOUT OPTIONS:
   EJKit:
-    :commit: 1963f1b174694adf4fd6b5117d01c30a5fc6bb52
+    :commit: 513639ac63c79c182baddc5e4d9959b299b2a236
     :git: https://github.com/iOnRoad/EJKit.git
 
 SPEC CHECKSUMS:
   AFgzipRequestSerializer: 329638fc8ed023a15188dc03dd2f1a930da30ea4
   AFNetworking: cb8d14a848e831097108418f5d49217339d4eb60
   BaiduMapKit: b1706a062597c70ec62a0cca93212cba1d3017e1
-  EJKit: 7cb227fb26bb94eae1a8f9a215dd793a90fb557e
+  EJKit: d91391566997791bf611887d77ffa1e1a52e1286
   FMDB: 854a0341b4726e53276f2a8996f06f1b80f9259a
   Godzippa: 21621e8ddc2f1521db473a72b48148c3f0e79d76
   KeychainItemWrapper: 67a240172ed669842bc6bc13ed554dcd50469fa2

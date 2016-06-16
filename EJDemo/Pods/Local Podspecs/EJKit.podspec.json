@@ -12,13 +12,13 @@
     "git": "https://github.com/iOnRoad/EJKit.git",
     "tag": "1.0.0"
   },
+  "source_files": "Pod/Classes/EJKitHeader.h",
+  "resources": "Pod/Classes/Resource/***",
+  "public_header_files": "Pod/Classes/EJKitHeader.h",
   "platforms": {
     "ios": "7.0"
   },
   "requires_arc": true,
-  "source_files": "Pod/Classes/EJKitHeader.h",
-  "resources": "Pod/Classes/Resource/***",
-  "public_header_files": "Pod/Classes/EJKitHeader.h",
   "subspecs": [
     {
       "name": "EJBase",
@@ -27,7 +27,12 @@
       "frameworks": [
         "UIKit",
         "QuartzCore"
-      ]
+      ],
+      "dependencies": {
+        "EJKit/EJManager": [
+
+        ]
+      }
     },
     {
       "name": "EJManager",
@@ -39,6 +44,9 @@
       ],
       "dependencies": {
         "BaiduMapKit": [
+          "~> 2.10.2"
+        ],
+        "EJKit/EJTools": [
 
         ]
       }
@@ -58,10 +66,10 @@
       ],
       "dependencies": {
         "KeychainItemWrapper": [
-
+          "~> 1.2"
         ],
         "SDWebImage": [
-
+          "~> 3.7.6"
         ]
       }
     },
@@ -75,10 +83,10 @@
       ],
       "dependencies": {
         "LKDBHelper": [
-
+          "~> 2.2.1"
         ],
         "FMDB": [
-
+          "~> 2.6.2"
         ]
       }
     },
@@ -86,27 +94,38 @@
       "name": "EJHttpKit",
       "frameworks": "UIKit",
       "dependencies": {
-        "Reachability": [
+        "EJKit/EJBase": [
 
+        ],
+        "Reachability": [
+          "~> 3.2"
         ],
         "AFNetworking": [
-
+          "~> 2.6.3"
         ],
         "OpenUDID": [
-
+          "~> 1.0.0"
         ],
         "AFgzipRequestSerializer": [
-
+          "~> 0.0.2"
         ],
         "MJExtension": [
-
+          "~> 3.0.10"
+        ],
+        "LKDBHelper": [
+          "~> 2.2.1"
         ]
       },
       "subspecs": [
         {
           "name": "EJHttpRequest",
           "source_files": "Pod/Classes/EJHttpKit/EJHttpRequest/*",
-          "public_header_files": "Pod/Classes/EJHttpKit/EJHttpRequest/*.h"
+          "public_header_files": "Pod/Classes/EJHttpKit/EJHttpRequest/*.h",
+          "dependencies": {
+            "EJKit/EJHttpKit/EJHttpClient": [
+
+            ]
+          }
         },
         {
           "name": "EJHttpClient",
