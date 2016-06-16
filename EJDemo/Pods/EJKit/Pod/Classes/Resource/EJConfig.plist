@@ -26,13 +26,13 @@
 		<key>loadingImageName</key>
 		<string>ej_loading,ej_loading1,ej_loading2,ej_loading3</string>
 		<key>navigatoinBar_backImgName</key>
-		<string>nav_bar_back</string>
+		<string>ej_nav_bar_back</string>
 		<key>tabbar_bgImgName</key>
-		<string>tab_radius</string>
+		<string>ej_tab_radius</string>
 		<key>keyboradImgName</key>
-		<string>keyborad</string>
+		<string>ej_keyborad</string>
 		<key>H5BaseURL</key>
-		<string>https://m.lebanban.com</string>
+		<string>https://www.baidu.com</string>
 	</dict>
 	<key>color</key>
 	<dict>

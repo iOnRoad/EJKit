@@ -14,7 +14,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "D77D46D204ACBCA16B703EF2"
+               BlueprintIdentifier = "10E6FE9FF4276ECC38497879"
                BuildableName = "libEJKit.a"
                BlueprintName = "EJKit"
                ReferencedContainer = "container:Pods.xcodeproj">

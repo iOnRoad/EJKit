@@ -74,11 +74,16 @@ PODS:
   - SDWebImage/Core (3.7.6)
 
 DEPENDENCIES:
-  - EJKit (from `~/Desktop/EJKit/EJKit.podspec`)
+  - EJKit (from `https://github.com/iOnRoad/EJKit.git`)
 
 EXTERNAL SOURCES:
   EJKit:
-    :podspec: ~/Desktop/EJKit/EJKit.podspec
+    :git: https://github.com/iOnRoad/EJKit.git
+
+CHECKOUT OPTIONS:
+  EJKit:
+    :commit: fad0e825203a4ede8a95c93258e0f6e22d8b7062
+    :git: https://github.com/iOnRoad/EJKit.git
 
 SPEC CHECKSUMS:
   AFgzipRequestSerializer: 329638fc8ed023a15188dc03dd2f1a930da30ea4

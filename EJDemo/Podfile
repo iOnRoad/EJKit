@@ -3,4 +3,4 @@ platform :ios, '7.0'
 inhibit_all_warnings!
 
 
-pod "EJKit", :podspec => '~/Desktop/EJKit/EJKit.podspec'
+pod 'EJKit', :git => 'https://github.com/iOnRoad/EJKit.git'
