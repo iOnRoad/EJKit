@@ -9,8 +9,8 @@
 //----------此管理器为百度定位管理------------
 
 #import <Foundation/Foundation.h>
-#import <BaiduMapAPI_Search/BMKSearchComponent.h>
-#import <BaiduMapAPI_Location/BMKLocationComponent.h>
+#import "BMKSearchComponent.h"
+#import "BMKLocationComponent.h"
 #import "SynthesizeSingleton.h"
 
 @class EJGPSInfo;

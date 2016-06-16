@@ -3,4 +3,8 @@ platform :ios, '7.0'
 inhibit_all_warnings!
 
 
+target 'EJDemo' do
+
 pod 'EJKit', :git => 'https://github.com/iOnRoad/EJKit.git'
+
+end
