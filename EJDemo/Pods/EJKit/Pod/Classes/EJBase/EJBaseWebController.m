@@ -7,10 +7,10 @@
 //
 
 #import "EJBaseWebController.h"
+#import "EJKitConfigManager.h"
 #import "EJTools.h"
 #import "UIViewController+EJExtension.h"
 #import "UIView+EJExtension.h"
-#import "EJKitConfigManager.h"
 
 @interface EJBaseWebController () 
 

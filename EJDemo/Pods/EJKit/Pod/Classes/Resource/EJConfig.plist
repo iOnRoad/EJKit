@@ -32,7 +32,7 @@
 		<key>keyboradImgName</key>
 		<string>ej_keyborad</string>
 		<key>H5BaseURL</key>
-		<string>https://www.baidu.com</string>
+		<string></string>
 	</dict>
 	<key>color</key>
 	<dict>
