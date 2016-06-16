@@ -11,8 +11,6 @@
 #import "UIViewController+EJExtension.h"
 #import "UIView+EJExtension.h"
 #import "EJKitConfigManager.h"
-#import "EJDefaultLoadingView.h"
-
 
 @interface EJBaseWebController () 
 
@@ -109,7 +107,7 @@ static NSString *ej_InterceptorClassName = nil;
 - (void)ej_loadURLString:(NSString *)urlString OfWebView:(UIWebView *)webView{
     if([EJTools ej_stringIsAvailable:urlString]){
         webView.delegate = self;
-        [[[EJDefaultLoadingView alloc] init] ej_showInView:webView];
+        [webView ej_startLoadingByStyle:UIActivityIndicatorViewStyleGray];
         NSURLRequest *urlRequest = [NSURLRequest requestWithURL:[NSURL URLWithString:urlString] cachePolicy:NSURLRequestUseProtocolCachePolicy timeoutInterval:30];
         [webView loadRequest:urlRequest];
     }
@@ -179,7 +177,7 @@ static NSString *ej_InterceptorClassName = nil;
 }
 
 -(void)webViewDidFinishLoad:(UIWebView *)webView{
-    [[EJDefaultLoadingView ej_loadingInContainerView:webView] ej_dismiss];
+    [webView ej_endLoading];
     self.navigationItem.title =  [webView stringByEvaluatingJavaScriptFromString:@"document.title"];   //获取网页Title
     
     //获取是否启用返回指定URL功能
@@ -209,7 +207,7 @@ static NSString *ej_InterceptorClassName = nil;
 }
 
 -(void)webView:(UIWebView *)webView didFailLoadWithError:(NSError *)error{
-    [[EJDefaultLoadingView ej_loadingInContainerView:webView] ej_dismiss];
+    [webView ej_endLoading];
     NSString *failTip = @"";
     if(error.code == NSURLErrorBadURL || error.code == NSURLErrorUnsupportedURL || error.code == NSURLErrorCannotFindHost || error.code == NSURLErrorCannotConnectToHost){
         //超时
