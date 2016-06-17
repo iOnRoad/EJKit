@@ -57,14 +57,17 @@
 }
 
 - (void)addNavBarSearchBtn{
+    EJBaseViewController *currentController = [EJBaseViewController ej_currentController];
 //    [self ej_setNavBarRightItemWithTitle:@"搜索" action:@selector(goSearchView: )];
-//    [self ej_setNavBarRightItemWithTitle:nil imageName:@"first_search" action:@selector(goSearchView:)];
+    //设置导航条右上角BarItem
+    [self ej_setNavBarRightItemWithTitle:nil imageName:@"first_search" action:@selector(goSearchView:)];
     [self ej_setNavBarRightItemForImageInRightPositionWithTitle:@"搜索" imageName:@"first_search" action:@selector(goSearchView: )];
     
 //    [self ej_setNavBarLeftItemWithTitle:@"搜索" action:@selector(goSearchView: )];
         [self ej_setNavBarLeftItemWithTitle:@"搜索" imageName:@"first_search" action:@selector(goSearchView:)];
 //    [self ej_setNavBarLeftItemForImageInRightPositionWithTitle:@"搜索" imageName:@"first_search" action:@selector(goSearchView: )];
     
+    //设置导航条右上角Item小红点显示
     [self ej_showRedDotInNavigationRightItem:YES];
 }
 
@@ -72,9 +75,13 @@
 
 - (void)goWebView:(id)sender{
     EJBaseWebController *webController = [[EJBaseWebController alloc] initWithURLString:@"http://www.xxsadadsadsfasdfasdf.com"];
+    [webController ej_loadURLString:@"http://www.github.com"];
     webController.navigationItem.title = @"Web视图";
     webController.hidesBottomBarWhenPushed = YES;
     [self.navigationController pushViewController:webController animated:YES];
+    
+    //注册拦截器用于处理公共拦截业务，本方法做到业务类和页面方法分离，降低耦合性
+    [EJBaseWebController ej_registerWebInterceptorClassName:@"EJWebInterceptorMananger"];
 }
 
 

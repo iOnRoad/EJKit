@@ -15,6 +15,6 @@
 @property(nonatomic,assign) BOOL ej_closeAutoScrollInputView;       //当键盘弹出时，当前的输入框是否自动滚动.默认YES。
 
 - (void)ej_keyboardWillShow:(NSNotification *)aNotification;       //键盘显示通知
-- (void)ej_keyboardWillHidden:(NSNotification *)aNotification;     //键盘显示通知
+- (void)ej_keyboardWillHidden:(NSNotification *)aNotification;     //键盘隐藏通知
 
 @end

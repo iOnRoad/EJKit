@@ -81,9 +81,10 @@
     //注册http请求基本信息
     [[EJHttpClient shared] ej_registerBaseURL:@"http://wthrcdn.etouch.cn"];
     [[EJHttpClient shared] ej_registerInterceptorClassName:@"TestHttpInterceptor"];
-    [[EJHttpClient shared] ej_registerCommonResponseClassName:@"WeatherCommonResponse" bizResponseKey:@"data"];
+//    [[EJHttpClient shared] ej_registerCommonRequestClassName:@"WeatherCommonRequestModel"  bizRequestKey:@"data"];
+    [[EJHttpClient shared] ej_registerCommonResponseClassName:@"WeatherCommonResponseModel" bizResponseKey:@"data"];
     [[EJHttpClient shared] ej_registerLoadingViewClassName:@"EJDefaultLoadingView" errorViewClassName:@"EJDefaultErrorView"];
-    
+//    [[EJHttpClient shared] ej_enableGzipRequestSerializer];
     //注册百度GPS key
     [[EJBaiduGPSManager shared] ej_registerBaiduGPSKey:@"xxx"];
     //检查权限
@@ -101,7 +102,7 @@
     [[EJHttpCookieManager shared] ej_cookie];
     
     //配置基类中的颜色、字体等信息
-    //赋值EJConfig.plist文件至项目中，修改名字为XXConfig.plist文件，通过EJKitConfigManager指定
+    //复制EJConfig.plist文件至项目中，修改名字为XXConfig.plist文件，通过EJKitConfigManager指定
     //之后的所有配置信息根据自己项目配置导航条颜色、tabbar的字体大小、颜色等，如果使用默认的加载符，还可以指定加载的图片
     [EJKitConfigManager shared].ej_configPlistName = @"TestConfig.plist";
 }
