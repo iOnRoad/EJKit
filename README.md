@@ -10,6 +10,8 @@
 
 ##如何安装
 
+利用cocoapods安装，版本支持7.0以上
+
 ```ruby
 source 'https://github.com/CocoaPods/Specs.git'
 platform :ios, '7.0'
@@ -18,7 +20,7 @@ inhibit_all_warnings!
 
 target 'EJDemo' do
 
-pod 'EJKit', :git => 'https://github.com/iOnRoad/EJKit.git'
+pod 'EJKit', '~> 1.0.0'
 
 end
 
