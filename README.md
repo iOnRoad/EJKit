@@ -8,6 +8,22 @@
 - **管理器**：利用BaiduMapKit，封装了定位功能的方法调用，以及Cookie写入读取和iOS推送的快捷接入。
 - **工具**：封装了开发应用中常用的一些方法以及一些系统方法类的扩展。
 
+##如何安装
+
+```ruby
+source 'https://github.com/CocoaPods/Specs.git'
+platform :ios, '7.0'
+inhibit_all_warnings!
+
+
+target 'EJDemo' do
+
+pod 'EJKit', :git => 'https://github.com/iOnRoad/EJKit.git'
+
+end
+
+```
+
 ##如何使用它？
 
 ###一.基类
