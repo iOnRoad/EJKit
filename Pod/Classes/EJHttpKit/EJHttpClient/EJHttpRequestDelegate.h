@@ -21,5 +21,6 @@
 - (UIView *)ej_loadingContainerView;       //loading显示容器
 - (BOOL)ej_endLoadingWhenFinished;     //请求结束后是否需要隐藏loading
 - (BOOL)ej_showErrorMessage;   //是否显示错误信息
+- (BOOL)ej_ignoreDuplicateRequest;     //是否忽略重复请求
 
 @end

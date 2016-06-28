@@ -53,6 +53,10 @@ MJCodingImplementation
     return YES;
 }
 
+- (BOOL)ej_ignoreDuplicateRequest{
+    return YES;
+}
+
 
 
 @end

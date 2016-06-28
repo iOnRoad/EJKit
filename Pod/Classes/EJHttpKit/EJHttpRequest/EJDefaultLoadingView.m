@@ -7,12 +7,11 @@
 //
 
 #import "EJDefaultLoadingView.h"
-#import "EJKitConfigManager.h"
 
 @interface EJDefaultLoadingView ()
 
 @property(strong,nonatomic) UIView *ej_containerView;
-@property(strong,nonatomic) UIImageView *ej_animationImageView;
+@property(strong,nonatomic) UIActivityIndicatorView *ej_indicatorView;
 @property(strong,nonatomic) UILabel *ej_loadingTextLabel;
 @property(strong,nonatomic) NSTimer *ej_loadingTimer;
 @property(assign,nonatomic) NSInteger ej_timerCount;
@@ -34,33 +33,22 @@
         self.alpha = 0.1;
         self.backgroundColor = [UIColor colorWithWhite:0 alpha:0.0];
         
-        CGFloat imageWidth = 50;
-        CGFloat imageOffsetX = 20;
+        CGFloat width = 30;
+        CGFloat offsetX = 20;
         //ContainerView
-        _ej_containerView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, imageWidth+2*imageOffsetX, imageWidth+2*imageOffsetX)];
+        _ej_containerView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, width+2*offsetX, width+2*offsetX)];
         self.ej_containerView.layer.masksToBounds = YES;
         self.ej_containerView.layer.cornerRadius = 12.0;
         self.ej_containerView.backgroundColor = [UIColor colorWithWhite:0 alpha:0.7];
         [self addSubview:self.ej_containerView];
         self.ej_containerView.center = CGPointMake(self.center.x, self.center.y - 64);
         
-        //AnimationImageView
-        NSArray *loadingImageNames = [EJConfigData ej_loadingImageNames];
-        NSMutableArray *imagesArray = [NSMutableArray array];
-        for(int i=0; i<loadingImageNames.count; i++){
-            UIImage *image = [UIImage imageNamed:loadingImageNames[i]];
-            if(image){
-                [imagesArray addObject:image];
-            }
-        }
-        _ej_animationImageView = [[UIImageView alloc] initWithFrame:CGRectMake(20, 8, imageWidth, imageWidth)];
-        self.ej_animationImageView.animationImages = imagesArray;//将序列帧数组赋给UIImageView的animationImages属性
-        self.ej_animationImageView.animationDuration = 0.50;//设置动画时间
-        self.ej_animationImageView.animationRepeatCount = 0;//设置动画次数 0 表示无限
-        [self.ej_containerView addSubview:self.ej_animationImageView];
+        _ej_indicatorView = [[UIActivityIndicatorView alloc] initWithActivityIndicatorStyle:UIActivityIndicatorViewStyleWhiteLarge];
+        self.ej_indicatorView.frame = CGRectMake(offsetX, 8, width, width);
+        [self.ej_containerView addSubview:self.ej_indicatorView];
         
         //Loading TextLabel
-        _ej_loadingTextLabel = [[UILabel alloc] initWithFrame:CGRectMake(0, imageWidth+15, _ej_containerView.frame.size.width, 20)];
+        _ej_loadingTextLabel = [[UILabel alloc] initWithFrame:CGRectMake(0, width+15, _ej_containerView.frame.size.width, 20)];
         self.ej_loadingTextLabel.backgroundColor = [UIColor clearColor];
         self.ej_loadingTextLabel.textColor = [UIColor whiteColor];
         self.ej_loadingTextLabel.font = [UIFont systemFontOfSize:14];
@@ -109,7 +97,7 @@
 - (void)ej_startAnimation{
     [super ej_startAnimation];
     
-    [self.ej_animationImageView startAnimating];//开始播放动画
+    [self.ej_indicatorView startAnimating];//开始播放动画
     [self ej_startLoadingTextAnimation];
     self.alpha = 0.0;
     __weak typeof(self) weakSelf = self;
@@ -121,7 +109,7 @@
 - (void)ej_stopAnimation{
     [super ej_stopAnimation];
     
-    [self.ej_animationImageView stopAnimating];    //停止动画
+    [self.ej_indicatorView stopAnimating];    //停止动画
     [self ej_stopLoadingTextAnimation];
     __weak typeof(self) weakSelf = self;
     [UIView animateWithDuration:0.2 animations:^{

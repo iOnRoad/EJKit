@@ -32,6 +32,7 @@
 //handle object request
 - (void)ej_handleSuccessResultWithRequest:(id<EJHttpRequestDelegate>)request responseObject:(id)responseObject  responseHandler:(EJHttpHandler)handler commonResponseHandler:(EJHttpCommonHandler)cmnHandler;
 - (void)ej_handleFailedResultWithRequest:(id<EJHttpRequestDelegate>)request error:(NSError *)error  responseHandler:(EJHttpHandler)handler commonResponseHandler:(EJHttpCommonHandler)cmnHandler;
+- (void)ej_handlerResponseParam:(NSDictionary *)param withError:(NSError *)error responseHandler:(EJHttpParamHandler)handler;
 
 @end
 
@@ -135,13 +136,15 @@ static EJHttpClient *ej_sharedHttpClient = nil;
     
     //发起请求,先判断请求是否存在队列中,如果在，在取消已有请求
     AFHTTPRequestOperationManager *manager = [self ej_requestManagerWithURLString:urlString];
-    for(AFURLConnectionOperation *op in manager.operationQueue.operations){
-        if([op.request.URL.absoluteString rangeOfString:urlString].length>0){
-            NSURLRequest *urlRequest =  [manager.requestSerializer requestBySerializingRequest:op.request withParameters:bodyParam error:nil];
-            //如果URL一直，并且请求体一直，则取消请求
-            if([urlRequest.HTTPBody isEqualToData:op.request.HTTPBody]){
-                NSLog(@"Cancel Request URL:%@",op.request.URL.absoluteString);
-                [op cancel];
+    if([request ej_ignoreDuplicateRequest]){
+        for(AFURLConnectionOperation *op in manager.operationQueue.operations){
+            if([op.request.URL.absoluteString rangeOfString:urlString].length>0){
+                NSURLRequest *urlRequest =  [manager.requestSerializer requestBySerializingRequest:op.request withParameters:bodyParam error:nil];
+                //如果URL一直，并且请求体一直，则取消请求
+                if([urlRequest.HTTPBody isEqualToData:op.request.HTTPBody]){
+                    NSLog(@"Cancel Request URL:%@",op.request.URL.absoluteString);
+                    [op cancel];
+                }
             }
         }
     }
@@ -176,7 +179,7 @@ static EJHttpClient *ej_sharedHttpClient = nil;
     if(urlString.length==0){
         NSLog(@"###WARNING：URL IS NULL !!!");
         if(handler){
-            handler(nil,nil);
+            handler(nil,nil,NO);
         }
         return;
     }
@@ -185,17 +188,18 @@ static EJHttpClient *ej_sharedHttpClient = nil;
     NSLog(@"###Start Request URL:%@",urlString);
     NSLog(@"###Start Request Param:%@",bodyParam.description);
     //发起请求
+    __weak typeof(self) weakSelf = self;
     AFHTTPRequestOperationManager *manager = [self ej_requestManagerWithURLString:urlString];
     switch (method) {
         case GET:
         {
             [manager GET:urlString parameters:bodyParam success:^(AFHTTPRequestOperation *operation, id responseObject) {
                 if(handler){
-                    handler(responseObject,nil);
+                    [weakSelf ej_handlerResponseParam:responseObject withError:nil responseHandler:handler];
                 }
             } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
                 if(handler){
-                    handler(nil,error);
+                    [weakSelf ej_handlerResponseParam:nil withError:error responseHandler:handler];
                 }
             }];
         }
@@ -204,11 +208,11 @@ static EJHttpClient *ej_sharedHttpClient = nil;
         {
             [manager POST:urlString parameters:bodyParam success:^(AFHTTPRequestOperation *operation, id responseObject) {
                 if(handler){
-                    handler(responseObject,nil);
+                    [weakSelf ej_handlerResponseParam:responseObject withError:nil responseHandler:handler];
                 }
             } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
                 if(handler){
-                    handler(nil,error);
+                    [weakSelf ej_handlerResponseParam:nil withError:error responseHandler:handler];
                 }
             }];
         }
@@ -220,7 +224,7 @@ static EJHttpClient *ej_sharedHttpClient = nil;
     if(urlString.length==0){
         NSLog(@"###WARNING：URL IS NULL !!!");
         if(handler){
-            handler(nil,nil);
+            handler(nil,nil,NO);
         }
         return;
     }
@@ -230,6 +234,7 @@ static EJHttpClient *ej_sharedHttpClient = nil;
     NSLog(@"###Start Request filename:%@",fileName);
 
     //发起请求
+    __weak typeof(self) weakSelf = self;
     AFHTTPRequestOperationManager *manager = [self ej_requestUploadFileManagerWithURLString:urlString];
     AFHTTPRequestOperation *uploadOperation = [manager POST:urlString parameters:bodyParam constructingBodyWithBlock:^(id<AFMultipartFormData>  _Nonnull formData) {
         if(fileData){
@@ -237,11 +242,11 @@ static EJHttpClient *ej_sharedHttpClient = nil;
         }
     } success:^(AFHTTPRequestOperation * _Nonnull operation, id  _Nonnull responseObject) {
         if(handler){
-            handler(responseObject,nil);
+            [weakSelf ej_handlerResponseParam:responseObject withError:nil responseHandler:handler];
         }
     } failure:^(AFHTTPRequestOperation * _Nullable operation, NSError * _Nonnull error) {
         if(handler){
-            handler(nil,error);
+            [weakSelf ej_handlerResponseParam:nil withError:error responseHandler:handler];
         }
     }];
     
@@ -322,7 +327,7 @@ static EJHttpClient *ej_sharedHttpClient = nil;
             handler(bizObj,responseResult);
         }
         if(cmnHandler){
-            cmnHandler(bizObj,responseResult,cmnObj);
+            cmnHandler(bizObj,cmnObj,responseResult);
         }
         [self ej_dismissLoadingWithRequest:request];
     });
@@ -345,9 +350,32 @@ static EJHttpClient *ej_sharedHttpClient = nil;
                  handler(nil,false);
              }
              if(cmnHandler){
-                 cmnHandler(nil,false,nil);
+                 cmnHandler(nil,nil,false);
              }
          }
+    });
+}
+
+#pragma mark - param response 
+- (void)ej_handlerResponseParam:(NSDictionary *)param withError:(NSError *)error responseHandler:(EJHttpParamHandler)handler{
+    dispatch_async(dispatch_get_main_queue(), ^{
+        BOOL isInterceptor = NO;
+        if(param){
+            //拦截器
+            Class interceptorClass = NSClassFromString(self.ej_interceptorClassName);
+            //需要判断类是否存在
+            if(interceptorClass){
+                //如果存在协议名，则拦截
+                id<EJHttpResponseInterceptor> httpInterceptorDelegate = [interceptorClass new];
+                BOOL result = [httpInterceptorDelegate ej_interceptorResponseParam:param];
+                if(result){
+                    isInterceptor = YES;
+                }
+            }
+        }
+        
+        //下发业务
+        handler(param,error,isInterceptor);
     });
 }
 

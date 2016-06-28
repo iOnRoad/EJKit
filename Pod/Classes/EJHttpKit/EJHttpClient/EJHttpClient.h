@@ -17,9 +17,9 @@
 //仅包含响应内容对象的回调
 typedef void (^EJHttpHandler)(id respObject,BOOL success);
 //包含通用响应内容对象的回调
-typedef void (^EJHttpCommonHandler)(id respObject,BOOL success,id cmnRespObject);
+typedef void (^EJHttpCommonHandler)(id respObject,id cmnRespObject,BOOL success);
 //以字典方式展现回调，用于动态返回字段的情形
-typedef void (^EJHttpParamHandler)(NSDictionary *param,NSError *error);
+typedef void (^EJHttpParamHandler)(NSDictionary *param,NSError *error,BOOL isInterceptor);
 //上传图片回调bytes本次传输多少，totalBytes总共传输了多少，totalBytesExpected需要上传的文件大小是多少
 typedef void (^EJHttpProgressHandler)(NSUInteger bytes, long long totalBytes, long long totalBytesExpected);
 

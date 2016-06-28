@@ -14,5 +14,6 @@
 @required
 //如果需要拦截，则返回YES，默认需要返回NO，不拦截
 - (BOOL)ej_interceptorResponseObjectWithBizObject:(id)bizObject commonObject:(id)cmnObject;
+- (BOOL)ej_interceptorResponseParam:(NSDictionary *)param;
 
 @end
