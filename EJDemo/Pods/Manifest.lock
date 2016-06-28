@@ -91,7 +91,7 @@ EXTERNAL SOURCES:
 
 CHECKOUT OPTIONS:
   EJKit:
-    :commit: 9ad1d33f9edd5d7dd2018f89dd01c59f0e0dde67
+    :commit: 8d666633def7fb8f469603f00d490589f297b14d
     :git: https://github.com/iOnRoad/EJKit.git
 
 SPEC CHECKSUMS:
