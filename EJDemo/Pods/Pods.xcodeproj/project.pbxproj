@@ -425,7 +425,6 @@
 		15123F596C85FD79A83ED5BD482B89B2 /* MJFoundation.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MJFoundation.h; path = MJExtension/MJFoundation.h; sourceTree = "<group>"; };
 		15CDA7850C55A0014BFE54F5B917D897 /* NSObject+LKDBHelper.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NSObject+LKDBHelper.h"; path = "LKDBHelper/Helper/NSObject+LKDBHelper.h"; sourceTree = "<group>"; };
 		179D662494462CE8DA3015DB5E07AEF7 /* EJBaseResponseModel.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = EJBaseResponseModel.h; path = Pod/Classes/EJHttpKit/EJHttpRequest/EJBaseResponseModel.h; sourceTree = "<group>"; };
-		17BD2FB316607EC45F0C0FFE7FE40B83 /* ej_loading3@2x.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = "ej_loading3@2x.png"; path = "Pod/Classes/Resource/ej_loading3@2x.png"; sourceTree = "<group>"; };
 		18438F13E0ADB3AF9EF186C592AD4356 /* Godzippa.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = Godzippa.xcconfig; sourceTree = "<group>"; };
 		1897B3451A70FA1C43003A6D5A765744 /* MJExtensionConst.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = MJExtensionConst.m; path = MJExtension/MJExtensionConst.m; sourceTree = "<group>"; };
 		19CF544AC82DC5F6AB808EBEFC0F1BF1 /* UIImageView+HighlightedWebCache.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UIImageView+HighlightedWebCache.m"; path = "SDWebImage/UIImageView+HighlightedWebCache.m"; sourceTree = "<group>"; };
@@ -471,7 +470,6 @@
 		3D93FCD03578CDAC6F0C73BF4AD79319 /* EJHttpRequestDelegate.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = EJHttpRequestDelegate.h; path = Pod/Classes/EJHttpKit/EJHttpClient/EJHttpRequestDelegate.h; sourceTree = "<group>"; };
 		3E30EB24E48154FD15AD4C0BB3C6FC7E /* AFHTTPRequestOperationManager.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = AFHTTPRequestOperationManager.m; path = AFNetworking/AFHTTPRequestOperationManager.m; sourceTree = "<group>"; };
 		3EB1F577FCDB3FE828BEC3C54B5CBA5A /* Pods-EJDemo-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-EJDemo-dummy.m"; sourceTree = "<group>"; };
-		408763705864C669BC3F3E1BD0E62569 /* ej_loading1@2x.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = "ej_loading1@2x.png"; path = "Pod/Classes/Resource/ej_loading1@2x.png"; sourceTree = "<group>"; };
 		417959064D8FDE3263F0C113D3EADA70 /* libKeychainItemWrapper.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libKeychainItemWrapper.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		4267984AE9908CEB0D0FE4714FA817FF /* SDWebImageDownloaderOperation.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = SDWebImageDownloaderOperation.m; path = SDWebImage/SDWebImageDownloaderOperation.m; sourceTree = "<group>"; };
 		4330459CFD3FF52F5ED204E895A264E0 /* NSDate+EJExtension.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "NSDate+EJExtension.m"; path = "Pod/Classes/EJTools/NSDate+EJExtension.m"; sourceTree = "<group>"; };
@@ -500,12 +498,10 @@
 		5416E8BC6AC6E9B5A558272D590F722F /* LKDBUtils.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = LKDBUtils.m; path = LKDBHelper/Helper/LKDBUtils.m; sourceTree = "<group>"; };
 		56096B4D87605842BB707A338DA29376 /* AFURLResponseSerialization.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = AFURLResponseSerialization.h; path = AFNetworking/AFURLResponseSerialization.h; sourceTree = "<group>"; };
 		5643506AB1B572C1C629382ACBBE8119 /* AFURLSessionManager.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = AFURLSessionManager.m; path = AFNetworking/AFURLSessionManager.m; sourceTree = "<group>"; };
-		57246D587F4EB74B4D5153920F2C3283 /* ej_loading3@3x.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = "ej_loading3@3x.png"; path = "Pod/Classes/Resource/ej_loading3@3x.png"; sourceTree = "<group>"; };
 		572560BF07F3DED64A5F3CFCD3B2AEAB /* Reachability.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = Reachability.m; sourceTree = "<group>"; };
 		58678EA7F1A911ED813464827506E8D1 /* EJTools.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = EJTools.m; path = Pod/Classes/EJTools/EJTools.m; sourceTree = "<group>"; };
 		58CDBBCC1B1B71389DEF7DEB1208F223 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS9.3.sdk/System/Library/Frameworks/SystemConfiguration.framework; sourceTree = DEVELOPER_DIR; };
 		5C560AEDA4BC53C816F241900568BC73 /* EJKeyboardViewController.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = EJKeyboardViewController.h; path = Pod/Classes/EJBase/EJKeyboardViewController.h; sourceTree = "<group>"; };
-		5CDB23A084B4982B6BCAE80EF182AA75 /* ej_loading2@3x.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = "ej_loading2@3x.png"; path = "Pod/Classes/Resource/ej_loading2@3x.png"; sourceTree = "<group>"; };
 		5DF305F7C3A9CE3B38E44E99C8D2BEC7 /* FMDatabaseQueue.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FMDatabaseQueue.h; path = src/fmdb/FMDatabaseQueue.h; sourceTree = "<group>"; };
 		5ED649560B467553E357E1D1E816DB00 /* UIActivityIndicatorView+AFNetworking.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIActivityIndicatorView+AFNetworking.h"; path = "UIKit+AFNetworking/UIActivityIndicatorView+AFNetworking.h"; sourceTree = "<group>"; };
 		5F0B1173FB8D787498A06D99DF3137BB /* NSObject+LKDBHelper.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "NSObject+LKDBHelper.m"; path = "LKDBHelper/Helper/NSObject+LKDBHelper.m"; sourceTree = "<group>"; };
@@ -515,7 +511,6 @@
 		6166F911A7906083389BD3A84352633F /* NSObject+MJCoding.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NSObject+MJCoding.h"; path = "MJExtension/NSObject+MJCoding.h"; sourceTree = "<group>"; };
 		64D3BE3AE66DD52FDBFC99A5A6FE6315 /* EJLoadingView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = EJLoadingView.h; path = Pod/Classes/EJHttpKit/EJHttpClient/EJLoadingView.h; sourceTree = "<group>"; };
 		65E6A3704961E31C68F98E120A13A515 /* UIProgressView+AFNetworking.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UIProgressView+AFNetworking.m"; path = "UIKit+AFNetworking/UIProgressView+AFNetworking.m"; sourceTree = "<group>"; };
-		680DDB3B23BDE051D34C2EBADACDEFD2 /* ej_loading@2x.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = "ej_loading@2x.png"; path = "Pod/Classes/Resource/ej_loading@2x.png"; sourceTree = "<group>"; };
 		6A6201CA697304EA74C64AA5A95B81EB /* libAFNetworking.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libAFNetworking.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		6A786B68F6DE85A1169E148F6686123F /* AFURLRequestSerialization.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = AFURLRequestSerialization.m; path = AFNetworking/AFURLRequestSerialization.m; sourceTree = "<group>"; };
 		6F288F3245FDA27C980C5F62BE6F1DF9 /* AFURLRequestSerialization.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = AFURLRequestSerialization.h; path = AFNetworking/AFURLRequestSerialization.h; sourceTree = "<group>"; };
@@ -573,7 +568,6 @@
 		978C5130D392F7EE418340877773F234 /* AFHTTPSessionManager.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = AFHTTPSessionManager.m; path = AFNetworking/AFHTTPSessionManager.m; sourceTree = "<group>"; };
 		988A0BC6D05AEDA0F305B08766284D25 /* AFSecurityPolicy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = AFSecurityPolicy.m; path = AFNetworking/AFSecurityPolicy.m; sourceTree = "<group>"; };
 		98BB6D7473803D984D8F4EAA98DF7172 /* MJProperty.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MJProperty.h; path = MJExtension/MJProperty.h; sourceTree = "<group>"; };
-		9935005BB0C419F132C13717838F6B26 /* ej_loading1@3x.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = "ej_loading1@3x.png"; path = "Pod/Classes/Resource/ej_loading1@3x.png"; sourceTree = "<group>"; };
 		99910F995B17C79B3B912B8CE0AC0A4B /* NSObject+MJProperty.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "NSObject+MJProperty.m"; path = "MJExtension/NSObject+MJProperty.m"; sourceTree = "<group>"; };
 		9A21C4B3241E344C5675ABFA0D3BC5D7 /* KeychainItemWrapper-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "KeychainItemWrapper-prefix.pch"; sourceTree = "<group>"; };
 		9AB382B36057FCEF0D64E20C8021FB0E /* AFNetworkActivityIndicatorManager.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = AFNetworkActivityIndicatorManager.m; path = "UIKit+AFNetworking/AFNetworkActivityIndicatorManager.m"; sourceTree = "<group>"; };
@@ -595,7 +589,6 @@
 		ABC7782FEB60F7D00E3AF4B4EEAFCA8E /* UIAlertView+EJExtension.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIAlertView+EJExtension.h"; path = "Pod/Classes/EJTools/UIAlertView+EJExtension.h"; sourceTree = "<group>"; };
 		AC2509D8E49AD804B019A3767376BACA /* UIProgressView+AFNetworking.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIProgressView+AFNetworking.h"; path = "UIKit+AFNetworking/UIProgressView+AFNetworking.h"; sourceTree = "<group>"; };
 		AC8FF3D57F8A543D15FEB01C20C34F12 /* UIKit+AFNetworking.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIKit+AFNetworking.h"; path = "UIKit+AFNetworking/UIKit+AFNetworking.h"; sourceTree = "<group>"; };
-		AC9D6E5E1D734DDCC99D861C5E4E02DC /* ej_loading2@2x.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = "ej_loading2@2x.png"; path = "Pod/Classes/Resource/ej_loading2@2x.png"; sourceTree = "<group>"; };
 		AD26BE10165343829572E722FAC9B3DD /* NSFileManager+Godzippa.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NSFileManager+Godzippa.h"; path = "Godzippa/NSFileManager+Godzippa.h"; sourceTree = "<group>"; };
 		B10596EBC43975DB4F9582AB81D927F5 /* Pods-EJDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-EJDemo.release.xcconfig"; sourceTree = "<group>"; };
 		B20243ED1A0D98D103CC9B48AA972A4E /* AFNetworking.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = AFNetworking.xcconfig; sourceTree = "<group>"; };
@@ -639,7 +632,6 @@
 		CD1FD022FB4343098A31DE644255245C /* EJLoadingView.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = EJLoadingView.m; path = Pod/Classes/EJHttpKit/EJHttpClient/EJLoadingView.m; sourceTree = "<group>"; };
 		CDE40E246A944E1E5931193CFC61C2CF /* EJDefaultLoadingView.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = EJDefaultLoadingView.m; path = Pod/Classes/EJHttpKit/EJHttpRequest/EJDefaultLoadingView.m; sourceTree = "<group>"; };
 		CE1AF2791F64061219CF04BD5A9B35DE /* AFNetworkReachabilityManager.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = AFNetworkReachabilityManager.m; path = AFNetworking/AFNetworkReachabilityManager.m; sourceTree = "<group>"; };
-		CF69D959BEDD471287775D69C31D09CC /* ej_loading@3x.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = "ej_loading@3x.png"; path = "Pod/Classes/Resource/ej_loading@3x.png"; sourceTree = "<group>"; };
 		D0086535DA1CCBEE2863C1A9A95118F3 /* FMDB.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = FMDB.xcconfig; sourceTree = "<group>"; };
 		D1A4D645D8D8FDD704BF8CF6470B1E85 /* UIAlertView+AFNetworking.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UIAlertView+AFNetworking.m"; path = "UIKit+AFNetworking/UIAlertView+AFNetworking.m"; sourceTree = "<group>"; };
 		D22786C4A7E1F3BE8B0369EB020923C3 /* Pods-EJDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-EJDemo.debug.xcconfig"; sourceTree = "<group>"; };
@@ -845,14 +837,6 @@
 			children = (
 				E6333F7B2767694B260176B071D6853A /* ej_keyborad@2x.png */,
 				E805C4B8C077454AEBF30671C39D0C63 /* ej_keyborad@3x.png */,
-				408763705864C669BC3F3E1BD0E62569 /* ej_loading1@2x.png */,
-				9935005BB0C419F132C13717838F6B26 /* ej_loading1@3x.png */,
-				AC9D6E5E1D734DDCC99D861C5E4E02DC /* ej_loading2@2x.png */,
-				5CDB23A084B4982B6BCAE80EF182AA75 /* ej_loading2@3x.png */,
-				17BD2FB316607EC45F0C0FFE7FE40B83 /* ej_loading3@2x.png */,
-				57246D587F4EB74B4D5153920F2C3283 /* ej_loading3@3x.png */,
-				680DDB3B23BDE051D34C2EBADACDEFD2 /* ej_loading@2x.png */,
-				CF69D959BEDD471287775D69C31D09CC /* ej_loading@3x.png */,
 				71350C7D32B604A8F7E4966106489707 /* ej_nav_bar_back@2x.png */,
 				2089C7BA709D7861CBE22ADF05862C5F /* ej_nav_bar_back@3x.png */,
 				B2A9E10718601F720D131BF7E72B7C74 /* ej_sad@2x.png */,

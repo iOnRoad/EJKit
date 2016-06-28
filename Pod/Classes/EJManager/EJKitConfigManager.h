@@ -84,6 +84,4 @@ SYNTHESIZE_SINGLETON_FOR_CLASS_HEADER(EJKitConfigManager)
 + (NSString *)ej_webViewReferrerURL;                       //返回页面时，不执行popView，指定加载的新页面URL
 + (NSString *)ej_webView404ImageName;                 //404目录名字
 
-+ (NSArray *)ej_loadingImageNames;     //动态加载符图片名字
-
 @end

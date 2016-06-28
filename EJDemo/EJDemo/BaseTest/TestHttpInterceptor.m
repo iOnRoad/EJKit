@@ -15,4 +15,9 @@
     return NO;
 }
 
+- (BOOL)ej_interceptorResponseParam:(NSDictionary *)param{
+    
+    return NO;
+}
+
 @end

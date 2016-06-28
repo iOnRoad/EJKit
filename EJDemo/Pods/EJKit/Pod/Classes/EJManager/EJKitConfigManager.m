@@ -147,9 +147,5 @@ SYNTHESIZE_SINGLETON_FOR_CLASS(EJKitConfigManager)
     return [[EJKitConfigManager shared] ej_stringWithKey:@"webView404ImageName"];
 }
 
-+ (NSArray *)ej_loadingImageNames{
-    NSString *imageNames = [[EJKitConfigManager shared] ej_stringWithKey:@"loadingImageName"];
-    return [imageNames componentsSeparatedByString:@","];
-}
 
 @end
